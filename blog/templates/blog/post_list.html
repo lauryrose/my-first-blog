@@ -4,14 +4,13 @@
     </head>
     <body>
         <div>
-            <h1><a href="">Laury's Blog</a></h1>
-        </div>
-
-        <div>
-            <h2><a href="">Keur, keur, keur!</a></h2>
-            <p>Keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur!</p>
-        </div>
-
+            {% for post in posts %}
+    <div>
+        <p>publié: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
         <div>
             <h2><a href="">Keur, keur, keur!</a></h2>
             <p>" Keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur!</p>
