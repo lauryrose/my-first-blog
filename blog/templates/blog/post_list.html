@@ -1,22 +1,13 @@
-<html>
-    <head>
-        <title>Laury's blog</title>
-    </head>
-    <body>
-    <div>
-    <h1><a href="/">Blog de Chaton</a></h1>
-</div>
-        <div>
-            {% for post in posts %}
-    <div>
-        <p>publié: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaks }}</p>
-    </div>
-{% endfor %}
-        <div>
-            <h2><a href="">Keur, keur, keur!</a></h2>
-            <p>" Keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur, keur!</p>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaks }}</p>
         </div>
-    </body>
-</html>
+    {% endfor %}
+{% endblock content %}
